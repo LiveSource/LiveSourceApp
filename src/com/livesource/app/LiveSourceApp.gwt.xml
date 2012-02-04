@@ -14,7 +14,8 @@
   <!-- Other module inherits                                      -->
   <inherits name="com.google.gwt.json.JSON"/>
   <inherits name='com.googlecode.gwt.crypto.Crypto'/>
-  <inherits name="com.livesource.authentication.LiveSourceAuthentication"/>      
+  <inherits name="com.livesource.authentication.LiveSourceAuthentication"/>  
+  <inherits name="com.googlecode.gwttouch.Touch"/>      
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='com.livesource.app.client.GWTEntryPoint'/>

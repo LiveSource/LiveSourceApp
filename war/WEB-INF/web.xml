@@ -16,6 +16,16 @@
     <url-pattern>/livesourceapp/greet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <servlet-name>livesourceAuthenticationServlet</servlet-name>
+    <servlet-class>com.livesource.authentication.server.LoginServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>livesourceAuthenticationServlet</servlet-name>
+    <url-pattern>/livesourceapp/livesourceAuthentication</url-pattern>
+  </servlet-mapping>  
+  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>LiveSourceApp.html</welcome-file>
