@@ -4,9 +4,9 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Cookies;
 import com.google.gwt.user.client.Window.Location;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.livesource.authentication.client.EncryptText;
+import com.livesource.app.client.home.Home;
+import com.livesource.authentication.client.Utilities.EncryptText;
 import com.livesource.authentication.client.github.GithubLoginVerifyer;
-import com.livesource.authentication.client.github.LoginGithubButton;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -36,7 +36,7 @@ public class GWTEntryPoint implements EntryPoint {
 
 		rootPanel.setSize("100%", "100%");
 
-		rootPanel.add(new LoginGithubButton());
+		rootPanel.add(new Home());
 
 	}
 }
