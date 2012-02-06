@@ -4,7 +4,8 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class Home extends VerticalPanel {
 
-	public Home() {
+	public Home(String userName) {
 
+		this.add(new TopMenu(userName));
 	}
 }

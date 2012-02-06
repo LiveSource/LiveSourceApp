@@ -1,14 +1,10 @@
 package com.livesource.app.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.user.client.Cookies;
 import com.google.gwt.user.client.Window.Location;
 import com.googlecode.gwttouch.client.OrientationAwareLayoutPanel;
 import com.googlecode.gwttouch.client.transitions.SimpleTransitionPanel;
-import com.livesource.authentication.client.AnchorLogout;
-import com.livesource.authentication.client.Utilities.EncryptText;
-import com.livesource.authentication.client.github.GithubLoginVerifyer;
-import com.livesource.authentication.client.github.LoginGithubButton;
+import com.livesource.app.client.login.LoginVerifyer;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -22,29 +18,15 @@ public class GWTEntryPoint implements EntryPoint {
 	 */
 	public void onModuleLoad() {
 
-		String livesourceUser = EncryptText.decrypt(Cookies
-				.getCookie("livesourceUser"));
-
 		SimpleTransitionPanel resizableRoot = new SimpleTransitionPanel();
 		OrientationAwareLayoutPanel.get().add(resizableRoot);
 
-		ApplicationVariables.homePanel.clear();
+		ApplicationVariables.mainPanel.clear();
+		resizableRoot.setWidget(ApplicationVariables.mainPanel);
 
-		resizableRoot.setWidget(ApplicationVariables.homePanel);
+		String authenticationCode = Location.getParameter("code");
+		// final String error = Location.getParameter("error_reason");
 
-		if (livesourceUser == null || livesourceUser.equals("null")) {
-
-			GithubLoginVerifyer.authenticate(Location.getParameter("code"));
-			// final String error = Location.getParameter("error_reason");
-
-			ApplicationVariables.homePanel.add(new LoginGithubButton());
-
-		} else {
-
-			ApplicationVariables.homePanel.add(new AnchorLogout());
-
-			// RequestGetEntity.get(livesourceUser,true,true);
-		}
-
+		LoginVerifyer.authenticate(authenticationCode);
 	}
 }

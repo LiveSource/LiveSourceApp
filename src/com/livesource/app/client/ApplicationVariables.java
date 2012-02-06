@@ -1,8 +1,8 @@
 package com.livesource.app.client;
 
-import com.livesource.app.client.home.Home;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class ApplicationVariables {
 
-	public static Home homePanel = new Home();
+	public static VerticalPanel mainPanel = new VerticalPanel();
 }
