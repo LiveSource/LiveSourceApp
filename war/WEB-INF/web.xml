@@ -16,6 +16,16 @@
     <servlet-name>livesourceAuthenticationServlet</servlet-name>
     <url-pattern>/livesourceapp/livesourceAuthentication</url-pattern>
   </servlet-mapping>  
+ 
+  <servlet>
+    <servlet-name>githubAPIServlet</servlet-name>
+    <servlet-class>com.livesource.app.server.github.GithubAPIServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>githubAPIServlet</servlet-name>
+    <url-pattern>/livesourceapp/githubAPI</url-pattern>
+  </servlet-mapping>    
   
   <!-- Default page to serve -->
   <welcome-file-list>

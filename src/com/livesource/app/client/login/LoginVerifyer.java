@@ -5,8 +5,9 @@ import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.livesource.app.client.ApplicationVariables;
+import com.livesource.app.client.github.RequestGithubListRepositories;
 import com.livesource.app.client.home.Home;
-import com.livesource.app.client.home.LoadingPanel;
+import com.livesource.app.client.utilities.LoadingPanel;
 import com.livesource.authentication.client.Utilities.ConvertJson;
 import com.livesource.authentication.client.github.SetLoggedIn;
 
@@ -31,14 +32,18 @@ public class LoginVerifyer {
 						public void onSuccess(final String jsonResults) {
 
 							SetLoggedIn.authenticated(jsonResults);
-							
-							JSONObject obj = (JSONObject) JSONParser.parseStrict(jsonResults);
-							
-							String githubUserName = ConvertJson.convertToString(obj
-									.get("githubUserName"));
+
+							JSONObject obj = (JSONObject) JSONParser
+									.parseStrict(jsonResults);
+
+							String githubUserName = ConvertJson
+									.convertToString(obj.get("githubUserName"));
 
 							ApplicationVariables.mainPanel.clear();
-							ApplicationVariables.mainPanel.add(new Home(githubUserName));
+							ApplicationVariables.mainPanel.add(new Home(
+									githubUserName));
+
+							RequestGithubListRepositories.getJsonpRequest();
 						}
 					});
 

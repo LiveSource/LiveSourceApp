@@ -1,4 +1,4 @@
-package com.livesource.app.client.home;
+package com.livesource.app.client.utilities;
 
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.VerticalPanel;

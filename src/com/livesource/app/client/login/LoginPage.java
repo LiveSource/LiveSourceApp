@@ -4,7 +4,7 @@ import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HasVerticalAlignment;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.livesource.app.client.home.Blog;
+import com.livesource.app.client.utilities.Blog;
 import com.livesource.authentication.client.github.LoginGithubButton;
 
 public class LoginPage extends VerticalPanel {
