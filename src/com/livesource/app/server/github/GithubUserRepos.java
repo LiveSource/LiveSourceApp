@@ -10,6 +10,8 @@ import com.livesource.app.server.URLUtilities;
 public class GithubUserRepos {
 
     private static final String githubAPI_URL = "https://api.github.com/";
+    
+	private static String url = "http://jsonpfy.projectnection.appspot.com/GetDataService";
 
     public static String[] listRepositories(final String authenticationToken) {
 

@@ -1,17 +1,25 @@
 package com.livesource.app.client.home;
 
-import com.google.gwt.user.client.ui.Label;
+import java.util.ArrayList;
+
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class RepositoriesList extends VerticalPanel {
 
-	public RepositoriesList(String[] repositoriesArray) {
+	public RepositoriesList(ArrayList<String> repositoriesArray) {
+
+		this.setSpacing(15);
 
 		if (repositoriesArray != null) {
 
 			for (String repositoryName : repositoriesArray) {
 
-				Label repositoryLabel = new Label(repositoryName);
+				HTML repositoryLabel = new HTML(
+						"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+						"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+								+ "<a href=#><font size=3>" + repositoryName
+								+ "</font></a>");
 
 				this.add(repositoryLabel);
 			}

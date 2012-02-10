@@ -23,7 +23,7 @@ public class URLUtilities {
 	public static String fetchURLGet(final String u, String parameters) {
 		String returnedString = "";
 		try {
-			final URL url = new URL(u + "?" + encode(parameters));
+			final URL url = new URL(u + "?" + parameters);
 			final BufferedReader reader = new BufferedReader(
 					new InputStreamReader(url.openStream()));
 			String line;

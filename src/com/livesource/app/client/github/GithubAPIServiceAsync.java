@@ -1,5 +1,7 @@
 package com.livesource.app.client.github;
 
+import java.util.ArrayList;
+
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
@@ -8,5 +10,5 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 public interface GithubAPIServiceAsync {
 
 	void listRepositories(String authenticationCode,
-			AsyncCallback<String[]> callback);
+			AsyncCallback<ArrayList<String>> callback);
 }

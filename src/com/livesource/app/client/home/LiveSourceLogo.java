@@ -8,6 +8,6 @@ public class LiveSourceLogo extends Image {
 
 		this.setUrl("images/LiveSourceLogo.jpg");
 
-		this.setHeight("20px");
+		this.setHeight("25px");
 	}
 }

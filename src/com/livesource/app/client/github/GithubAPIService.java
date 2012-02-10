@@ -1,5 +1,7 @@
 package com.livesource.app.client.github;
 
+import java.util.ArrayList;
+
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
@@ -9,5 +11,5 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("githubAPI")
 public interface GithubAPIService extends RemoteService {
 
-	public String[] listRepositories(String authenticationCode);
+	public ArrayList<String> listRepositories(String authenticationCode);
 }
