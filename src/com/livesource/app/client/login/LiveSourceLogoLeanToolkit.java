@@ -2,9 +2,9 @@ package com.livesource.app.client.login;
 
 import com.google.gwt.user.client.ui.Image;
 
-public class LiveSourceLogoDevelopment extends Image {
+public class LiveSourceLogoLeanToolkit extends Image {
 
-	public LiveSourceLogoDevelopment() {
+	public LiveSourceLogoLeanToolkit() {
 
 		this.setUrl("images/LiveSourceLogoDevelopment.jpg");
 

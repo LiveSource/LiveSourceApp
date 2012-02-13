@@ -19,10 +19,18 @@ public class LoginPage extends VerticalPanel {
 		this.add(new Blog());
 
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		this.add(new LiveSourceLogoDevelopment());
+		this.add(new LiveSourceLogoLeanToolkit());
 
 		this.add(new Label(" "));
 
 		this.add(new LoginGithubButton());
+
+		//this.add(new LoginWithFacebookButton());
+
+		this.add(new Label(" "));
+
+		this.add(new Label(" "));
+
+		this.add(new FacebookFeedbackButton());
 	}
 }
